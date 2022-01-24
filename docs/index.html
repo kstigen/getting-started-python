@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Kom i gang med Python</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Kom i gang med Python</h1>
+				<p>
+					<a href="https://kstigen.github.io/getting-started-python/">https://kstigen.github.io/getting-started-python/</a>
+				</p>
+			</section>
+			<section>
+				<h2>Agenda</h2>
+				<div>
+					<ul>
+						<li>Håndtering av pythonversjoner</li>
+						<li>Virtuelle miljøer</li>
+						<li>Installasjon av pakker</li>
+						<li>Lag en applikasjon</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Håndtering av pythonversjoner</h2>
+			</section>
+			<section>
+				<ul>
+					<li>Conda</li>
+					<li>PyEnv</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Conda</h2>
+				<p style="font-size: x-large;">
+					Conda er pakkemanageren til suiten Anaconda. Anaconda er en større suite for installering av både
+					pakker og python-versjoner. Den er stor, tung og har opphav i data science miljøet.
+				</p>
+			</section>
+			<section>
+				<h2>PyEnv</h2>
+				<p style="font-size: x-large;">
+					PyEnv gjør en ting, og den ene tingen.
+					Den håndterer forskjellige python-versjoner. Kan sammenlignes med rbenv, jenv osv.
+				</p>
+				<p style="font-size: x-large;">
+					I denne workshopen kommer vi til å ta i bruk pyenv, da foredragsholderen foretrekker den. Hva du vil
+					bruke etter denne workshopen er opp til deg.
+				</p>
+			</section>
+			<section>
+				<h2>Oppgave 1</h2>
+				<p style="font-size: x-large;">
+					Installer PyEnv
+				</p>
+				<ul style="font-size: large;">
+					<li>Mac: <code>brew install pyenv</code></li>
+					<li>Linux: <a
+							href="https://github.com/pyenv/pyenv-installer">https://github.com/pyenv/pyenv-installer</a>
+					</li>
+					<li>Windows: <a
+							href="https://github.com/pyenv-win/pyenv-win">https://github.com/pyenv-win/pyenv-win</a>
+					</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<ul style="font-size: small;">
+						<li>Sørg for at pyenv er på PATH</li>
+						<li>Sørg for at <code>eval "$(pyenv init --path)"</code> kjøres fra din .profile/.bash_profile</li>
+						<li>Sørg for at <code>eval "$(pyenv init -)"</code> kjøres fra din .bashrc</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Oppgave 2</h2>
+				<p style="font-size: x-large;">
+					Installer python-versjoner
+				</p>
+				<ul style="font-size: large;">
+					<li>Installer versjon 3.10.2 av Python</li>
+					<li>Installer versjon 2.7.18 av Python</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<code>
+							pyenv help 
+						</code>
+				</div>
+			</section>
+			<section>
+				<h2>Oppgave 3</h2>
+				<p style="font-size: x-large;">
+					Kjør forskjellige python-versjoner i forskjellige kataloger
+				</p>
+				<ul style="font-size: large;">
+					<li>Lag deg to kataloger <code>py2</code> og <code>py3</code></li>
+					<li>Definer <code>py2</code> til å benytte versjon 2.7.18 av python</li>
+					<li>Definer <code>py3</code> til å benytte versjon 3.10.2 av python</li>
+					<li>Verifiser oppsettet med å kjøre <code>python --version</code> i hver av katalogene</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<code>pyenv help </code>
+				</div>
+			</section>
+			<section>
+				<h2>Videre til neste del..</h2>
+				<img src="https://media.giphy.com/media/S9i8jJxTvAKVHVMvvW/giphy.gif">
+			</section>
+
+			<section>
+				<h2>Håndtering av virtuelle miljøer</h2>
+			</section>
+			<section>
+				<ul>
+					<li>Conda</li>
+					<li>VirtualEnv (venv)</li>
+					<li>Pipenv</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li><s>Conda</s></li>
+					<li>VirtualEnv (venv)</li>
+					<li><s>Pipenv</s></li>
+				</ul>
+			</section>
+
+			<section>
+				<p>
+					Siden Python3.6 er følgende den foretrukne måten å opprette virtuelle miljøer på
+				</p>
+				<p>
+					<code>python -m venv [path-to-venv]</code>
+				</p>
+			</section>
+			<section>
+				<p style="font-size: x-large;">
+					Opprette et virtuelt miljø
+				</p>
+				<p>
+					<code>python -m venv [path-to-venv]</code>
+				</p>
+			</section>
+			<section>
+				<p style="font-size: x-large;">
+					Aktiver det virtuelle miljøet
+				</p>
+				<p>
+					<code>source [path-to-venv]/bin/activate</code>
+				</p>
+			</section>
+			<section>
+				<p style="font-size: x-large;">
+					Installere en pakke i det virtuelle miljøet
+				</p>
+				<p>
+					<code>pip install [pakkenavn]</code>
+				</p>
+			</section>
+			<section>
+				<p style="font-size: x-large;">
+					Deaktiver det virtuelle miljøet
+				</p>
+				<p>
+					<code>deactivate</code>
+				</p>
+			</section>
+
+			<section>
+				<h2>Oppgave 4</h2>
+				<p style="font-size: x-large;">
+					Opprett ditt første virtuelle miljø
+				</p>
+				<ul style="font-size: large;">
+					<li>Lag deg katalogen <code>py3-venv1</code></li>
+					<li>Definer <code>py3-venv1</code> til å benytte versjon 3.10.2 av python</li>
+					<li>Lag et virtuelt miljø inne i katalogen py3-venv1</li>
+					<li>Aktiver det virtuelle miljøet (<code>source venv/bin/activate</code>)</li>
+					<li>Verifiser at ingen pakker er installert i det nye miljøet (<code>pip freeze</code>)</li>
+					<li>Installer siste versjon av pakken requests (<code>pip install requests</code>)</li>
+					<li>Verifiser at pakken (og dens dependencies) har blitt installert (<code>pip freeze</code>)</li>
+					<li>Deaktiver det virtuelle mijøet (<code>deactivate</code>)</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<code>python -m venv venv </code>
+				</div>
+			</section>
+			<section>
+				Ser du noen fordeler/ulemper med denne måten å opprette virtuelle miljøer på?
+			</section>
+			<section>
+				<h2>pyenv-virtualenv</h2>
+				<p style="font-size: x-large;">
+					Plugin til pyenv som håndterer virtuelle miljøer på unix-like systemer.
+				</p>
+				<p style="font-size: x-large;">
+					Den flytter det virtuelle miljøet ditt ut av prosjektkatalogen
+				</p>
+			</section>
+			<section>
+				<h2>Opprette et virtuelt miljø</h2>
+				<p style="font-size: xx-large;">
+					<code>pyenv virtualenv [python-versjon] [navn-på-miljø]</code>
+				</p>
+				<p style="font-size: large;">
+					<code>pyenv virtualenv 3.10.2 prosjekt1</code>
+				</p>
+			</section>
+			<section>
+				<h2>Aktivere et virtuelt miljø</h2>
+				<p style="font-size: xx-large;">
+					<code>pyenv activate [navn-på-miljø]</code>
+				</p>
+				<p style="font-size: large;">
+					<code>pyenv activate prosjekt1</code>
+				</p>
+			</section>
+			<section>
+				<h2>Deaktivere et virtuelt miljø</h2>
+				<p style="font-size: xx-large;">
+					<code>pyenv deactivate</code>
+				</p>
+			</section>
+			<section>
+				<h2>Slette et virtuelt miljø</h2>
+				<p style="font-size: xx-large;">
+					<code>pyenv uninstall [navn-på-miljø]</code>
+				</p>
+				<p style="font-size: large;">
+					<code>pyenv uninstall prosjekt1</code>
+				</p>
+			</section>
+			<section>
+				<h2>Oppgave 5</h2>
+				<p style="font-size: x-large;">
+					Installer pyenv-virtualenv
+				</p>
+				<ul style="font-size: large;">
+					<li>Mac: <code>brew install pyenv-virtualenv</code></li>
+					<li>Linux: <a href="https://github.com/pyenv/pyenv-virtualenv">https://github.com/pyenv/pyenv-virtualenv</a></li>
+					<li>Windows: <a href="https://github.com/pyenv/pyenv-virtualenv">https://github.com/pyenv/pyenv-virtualenv</a></li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					Sørg for at <code>eval "$(pyenv virtualenv-init -)"</code> kjøres fra din .bashrc
+				</div>
+			</section>
+			<section>
+				<h2>Oppgave 6</h2>
+				<p style="font-size: x-large;">
+					Opprett et virtuelle miljø med pyenv-virtualenv
+				</p>
+				<ul style="font-size: large;">
+					<li>Lag deg katalogen <code>py3-pyenv1</code></li>
+					<li>Definer <code>py3-pyenv1</code> til å benytte versjon 3.10.2 av python</li>
+					<li>Lag et virtuelt miljø for prosjektet py3-venv1</li>
+					<li>Aktiver det virtuelle miljøet</li>
+					<li>Verifiser at ingen pakker er installert i det nye miljøet (<code>pip freeze</code>)</li>
+					<li>Installer siste versjon av pakken requests (<code>pip install requests</code>)</li>
+					<li>Verifiser at pakken (og dens dependencies) har blitt installert (<code>pip freeze</code>)</li>
+					<li>Deaktiver det virtuelle mijøet</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<code>pyenv help virtualenv</code>
+				</div>
+			</section>
+			<section>
+				<h2>Installasjon av pakker</h2>
+			</section>
+			<section>
+				<h2>Installere siste versjon av en pakke</h2>
+				<p style="font-size: xx-large;">
+					<code>pip install [pakkenavn]</code>
+				</p>
+			</section>
+			<section>
+				<h2>Installere en spesifikk versjon av en pakke</h2>
+				<p style="font-size: xx-large;">
+					<code>pip install [pakkenavn]==[versjon]</code>
+				</p>
+			</section>
+			<section>
+				<h2>Lagre pakkedetaljer til fil</h2>
+				<p style="font-size: xx-large;">
+					<code>pip freeze > requirements.txt</code>
+				</p>
+			</section>
+			<section>
+				<h2>Installere pakker fra fil</h2>
+				<p style="font-size: xx-large;">
+					<code>pip install -r requirements.txt</code>
+				</p>
+			</section>
+			<section>
+				<h2>Installere en spesifikk versjon av en pakke</h2>
+				<table>
+					<tr><td>~=</td><td>Compatible release clause</td></tr>
+					<tr><td>==</td><td>Version matching clause</td></tr>
+					<tr><td>!=</td><td>Version exclusion clause</td></tr>
+					<tr><td><=, >=</td><td>Inclusive ordered comparison clause</td></tr>
+					<tr><td><, ></td><td>Exclusive ordered comparison clause</td></tr>
+					<tr><td>===</td><td>Arbitrary equality clause.</td></tr>
+				</table>
+				
+			</section>
+			<section>
+				<h2>Oppgave 7</h2>
+				<p style="font-size: x-large;">
+					Lag en enkel applikasjon som henter Chuck Norris quotes
+				</p>
+				<ul style="font-size: large;">
+					<li>Lag deg katalogen <code>chuck-quotes</code></li>
+					<li>Lag et virtuelt miljø for prosjektet</li>
+					<li>Aktiver det virtuelle miljøet</li>
+					<li>Installer siste versjon av pakken requests (<code>pip install requests</code>)</li>
+					<li>Verifiser at pakken (og dens dependencies) har blitt installert (<code>pip freeze</code>)</li>
+					<li>Bruk requests-biblioteket og hent en quote med python</li>
+				</ul>
+				<div style="font-size: medium;">
+					<p>Tips</p>
+					<ul>
+						<li>
+							<code>pyenv help virtualenv</code>
+						</li>
+						<li><code>curl <a href="https://api.chucknorris.io/jokes/random">https://api.chucknorris.io/jokes/random</a></code></li>
+						<li><code><a href="https://github.com/kstigen/getting-started-python/tree/master/chuck-quotes">Løsningsforslag</a></code></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
